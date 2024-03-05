@@ -53,7 +53,7 @@ serde = { version = "1.0", default-features = false, features = [
 ] }
 
 # Host dependencies
-[target.'cfg(not(target_os = "zkvm"))'.dependencies]
+[target.'cfg(not(target_os = "r0-zkvm"))'.dependencies]
 addr2line = { version = "0.21", features = ["rustc-demangle"], optional = true }
 bincode = { version = "1.3", optional = true }
 bonsai-sdk = { workspace = true, optional = true }
@@ -87,7 +87,7 @@ rand = "0.8"
 tracing-forest = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 
-[target.'cfg(not(target_os = "zkvm"))'.dev-dependencies]
+[target.'cfg(not(target_os = "r0-zkvm"))'.dev-dependencies]
 flate2 = "1.0"
 risc0-zkvm-methods = { path = "methods" }
 serde_json = "1.0"
